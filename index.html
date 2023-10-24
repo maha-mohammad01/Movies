@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <h1>movies</h1>
+    <ul class="movie-list">
+        <% movie.map((x)=> { %>
+            <li class="movie-card">
+                <img src="<%= x.image %>" alt="<%= x.title %>" class="movie-image">
+                <div class="movie-info">
+                    <h2 class="movie-title">
+                        <%= x.title %>
+                    </h2>
+                    <p class="movie-genre">Genre: <%= x.genre %>
+                    </p>
+                    <p class="movie-year">Relase date: <%= x.year %>
+                    </p>
+                    <p class="movie-rating">Rating: <%= x.rating %>
+                    </p>
+                </div>
+            </li>
+            <% }) %>
+    </ul>
+</body>
+
+</html>
